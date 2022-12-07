@@ -3,10 +3,10 @@ on: [push]
 jobs:
   check-applications:
     runs-on: ubunto-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: setup-node
-        with:
-          node-version: 14
-      - run: npm run test
-      - run: node index.js
+   steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - run: npm run test
+    - run: node index.js
