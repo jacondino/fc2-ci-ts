@@ -13,6 +13,7 @@ jobs:
         run: npm i
 
       - run: npm run test
+
       - run: node index.js
 
       - name: Set up QEMU
